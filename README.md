@@ -1,2 +1,47 @@
-# diomend-shape-star-draw
-Simple star drawing program which I made for school assingment
+//diomend-shape-star-draw
+//Simple star drawing program which I made for school assingment using C++
+
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+	int totalRows = 6;
+	int row, colSpace, colStar;
+
+	for (row = 1; row <= totalRows; row++)//this is outer loop of first half of the shape
+	{
+		for (colStar = totalRows - row; colStar >= 1; colStar--)//printing "*" of left top side
+		{
+			cout << "*";
+		}
+		for (colSpace = 1; colSpace <= 2 * row - 1; colSpace++)//printing " " for middle section
+		{
+			cout << " ";
+		}
+		for (colStar = totalRows - row; colStar >= 1; colStar--)//printing "*" of right top side
+		{
+			cout << "*";
+		}
+		
+		cout << endl;
+	}
+	for (row = totalRows - 1; row >= 1; row--)//this is outer loop of second half of the shape
+	{
+		for (colStar = 1; colStar <= totalRows - row; colStar++)// printing "*" of lef bottom side
+		{
+			cout << "*";
+		}
+		for (colSpace = 1; colSpace <= 2 * row - 1; colSpace++)// printing " " for midlle section
+		{
+			cout << " ";
+		}
+		for (colStar = 1; colStar <= totalRows - row; colStar++)// printing "*" of right bottom side
+		{
+			cout << "*";
+		}
+		cout << endl;
+	}
+	system("pause");
+}
